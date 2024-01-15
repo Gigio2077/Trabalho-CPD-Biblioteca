@@ -4,7 +4,10 @@
 #ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
 
+using namespace std;
+
 #include <string>
+#include <vector>
 
 class Livro {
     private:
@@ -20,6 +23,8 @@ class Livro {
         std::string edicao;
 
     public:
+        void mostrar_info();
+        //void Livro::mostrar_info();
 
 };
 
@@ -33,4 +38,11 @@ class Usuario {
 
 };
 
-#endif // BIBLIOTECA_H
+//funcoes p/ lidar com arquivos
+
+void csv_to_bin(string nome_arquivo_csv = "exemplares-acervo.csv");
+
+
+
+
+#endif 

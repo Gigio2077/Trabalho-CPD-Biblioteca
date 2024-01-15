@@ -1,24 +1,15 @@
 #include <iostream>
-#include <fstream>
+#include "biblioteca.h"
 
 using namespace std;
     
-int main(){
-    
-    string nome_arquivo_csv = {"exemplares-acervo.csv"};
-    
-    fstream arquivo (nome_arquivo_csv, ios::in);
-    
-    string linha;
-    
-    if(arquivo.is_open())
-    {
-        getline(arquivo, linha);        
-        getline(arquivo, linha);        
 
-    }
+int main(){
+    //startup - default exemplares-acervo-csv
+    // if ()
+    csv_to_bin();
     
-    cout << linha;
+    // cout << linha;
     
     return 0;
 }
