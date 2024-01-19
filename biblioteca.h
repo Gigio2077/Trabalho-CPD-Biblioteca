@@ -24,7 +24,8 @@ class Livro {
 
     public:
         void mostrar_info();
-        //void Livro::mostrar_info();
+        Livro(const string&);
+
 
 };
 

@@ -1,15 +1,18 @@
 #include <iostream>
 #include "biblioteca.h"
-
+#include <fstream>
+#include <string>
 using namespace std;
-    
+
+struct Student {
+   int roll_no;
+   string name;
+};
 
 int main(){
-    //startup - default exemplares-acervo-csv
-    // if ()
-    csv_to_bin();
+
     
-    // cout << linha;
+    csv_to_bin();
     
     return 0;
 }
