@@ -69,24 +69,24 @@ void csv_to_bin(string nome_arquivo_csv){
 
     string linha;
     
-    while (getline(arquivo_csv, linha)) {
-        //algumas linhas defeituosas, entao testar se
-        // e vazia ou se contem o numero incorreto de ';' (sao 11)
-        if(linha.empty()){
-            continue;
-        }
-        int ponto_e_virgula = 0;
-        for(int i = 0; i < linha.length(); i++){
-            if(linha.at(i) == ';')
-                ponto_e_virgula++;
-        }
-        if(ponto_e_virgula != 11){
-            continue;
-        }
+    // while (getline(arquivo_csv, linha)) {
+    //     //algumas linhas defeituosas, entao testar se
+    //     // e vazia ou se contem o numero incorreto de ';' (sao 11)
+    //     if(linha.empty()){
+    //         continue;
+    //     }
+    //     int ponto_e_virgula = 0;
+    //     for(int i = 0; i < linha.length(); i++){
+    //         if(linha.at(i) == ';')
+    //             ponto_e_virgula++;
+    //     }
+    //     if(ponto_e_virgula != 11){
+    //         continue;
+    //     }
 
-        Livro livro_atual(linha);
-        arquivo_binario.write(reinterpret_cast<char*>(&livro_atual),sizeof(livro_atual));
-    }
+    //     Livro livro_atual(linha);
+    //     arquivo_binario.write(reinterpret_cast<char*>(&livro_atual),sizeof(livro_atual));
+    // }
 
     arquivo_csv.close();
     arquivo_binario.close();
