@@ -4,15 +4,12 @@
 #include <string>
 using namespace std;
 
-struct Student {
-   int roll_no;
-   string name;
-};
 
 int main(){
 
-    
     csv_to_bin();
+
+    bin_to_mem();
     
     return 0;
 }
