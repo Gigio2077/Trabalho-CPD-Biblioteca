@@ -11,26 +11,30 @@ using namespace std;
 
 class Livro {
     /*IMPORTANTE: originalmente eu tinha feito os atributos usando string 
-    no entanto na hora de ler do binario como a string tem tamanho variado 
-    nao e possivel ler um objeto padrao 1024 foi o tamanho maximo de token 
+    no entanto na hora de ler do binario como a string possui tamanhos variados 
+    nao e possivel ler um objeto identico 1299 foi o tamanho maximo de token 
     (fiz um teste com um loop simples)*/
+    
+
 
     private:
         int registroSistema;
-        char titulo[1024];
-        char subtitulo[1024];
-        char assunto[1024];
-        char autor[1024];
-        char tipoMaterial[1024];
+        char dados[1299];
+        string titulo;
+        string subtitulo;
+        string assunto;
+        string autor;
+        string tipoMaterial;
         int quantidade;
-        char ano[1024];
-        char editora[1024];
-        char edicao[1024];
+        string ano;
+        string editora;
+        string edicao;    
 
     public:
+        
         void mostrar_info();
         Livro(const string&);
-        Livro(){};
+        Livro(){}; //coonstrutor vazio - sem argumentos
 
 
 };
@@ -47,9 +51,9 @@ class Usuario {
 
 //funcoes p/ lidar com arquivos
 
-void csv_to_bin(string nome_arquivo_csv = "exemplares-acervo.csv");
+        void csv_to_bin(string nome_arquivo_csv = "exemplares-acervo.csv");
 
-void bin_to_mem(string livros_binario = "example.bin");
+        void bin_to_mem(string livros_binario = "example.bin");
 
 
 #endif 
